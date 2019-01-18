@@ -1,30 +1,17 @@
 <?php
 /**
- * Displays the main body of the theme
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
  *
- * @package Omega
- * @subpackage Frontend
- * @since 0.1
- *
- * @copyright (c) 2014 Oxygenna.com
- * @license http://wiki.envato.com/support/legal-terms/licensing-terms/
- * @version 1.18.6
+ * @package WordPress
  */
 
-get_header();
-oxy_blog_header();
-// if masonry option set then use masonry option for name otherwise use blog style
-$name = oxy_get_option( 'blog_style' );
-$classes = array( oxy_get_option( 'blog_swatch' ) );
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
 
-if( oxy_get_option( 'blog_masonry' ) !== 'no-masonry' ) {
-    $name = oxy_get_option( 'blog_masonry' );
-    if( oxy_get_option( 'blog_masonry_section_transparent' ) === 'on' ) {
-        $classes[] = 'section-transparent';
-    }
-}
-?>
-<section class="section <?php echo implode(' ', $classes); ?>">
-    <?php get_template_part( 'partials/blog/list', apply_filters( 'oxy_blog_type', $name ) ); ?>
-</section>
-<?php get_footer();
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
