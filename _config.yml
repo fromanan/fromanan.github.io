@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-title: Architect theme
-description: Architect is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-architect
-=======
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -48,4 +41,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
->>>>>>> 2fcf7d7debc86e96dbad3dc56157d3e0790cb7fa
